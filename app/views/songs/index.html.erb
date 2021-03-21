@@ -1,7 +1,4 @@
-<ul>
-<% @songs.each do |song| %>
-  <li><%= link_to song.title, song_path(song) %></li>
-<% end %>
-</ul>
+
+<%= render partial: 'songs', locals: {songs: @songs} %>
 <br>
 <%= link_to "Add New Song", new_song_path %>
